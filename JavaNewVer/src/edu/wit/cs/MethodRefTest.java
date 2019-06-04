@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.function.Consumer;
 
 /**
- * 方法引用的使用：本质上就是lambda表达式
+ * 方法引用的使用：本质上就是lambda表达式,方法引用也是函数式接口的实例
  * 使用格式：
  * 类（或对象）::方法名
  *
@@ -23,6 +23,8 @@ public class MethodRefTest {
     @Test
     public void test(){
         //使用一：对象::实例对象
+        //Consumer中的void accept(T t)
+        //PrintStream中的void println(T t)
         Consumer<String> con1 = str-> System.out.println(str);
         con1.accept("北京");
         System.out.println("------------");

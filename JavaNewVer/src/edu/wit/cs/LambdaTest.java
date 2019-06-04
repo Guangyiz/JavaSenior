@@ -5,6 +5,14 @@ import org.junit.Test;
 import java.util.Comparator;
 import java.util.function.Consumer;
 
+/**
+ * Lambda表达式的使用
+ * 1.举例：(o1,o2)（lambda形参列表，就是接口抽象方法的形参列表）->（lambda操作符或箭头操作符）o1.compareTo(o2)（lambda,就是重写抽象方法的方法体）
+ *
+ *lambda表达式的使用（分为下面6中情况介绍）
+ *本质：（函数式接口的实例）
+ * 函数式接口:只包含一个抽象方法的接口，称为函数式接口
+ */
 public class LambdaTest {
     @Test
     public void test(){
@@ -81,7 +89,7 @@ public class LambdaTest {
     //方法体只有一条语句，return与大括号若有，都可以省略
     @Test
     public void test5(){
-        Comparator<Integer> com2 = (o1,o2)->o1.compareTo(o2);
+        Comparator<Integer> com2 = (o1,o2)->o1.compareTo(o2);//
         System.out.println(com2.compare(12,24));
     }
 
